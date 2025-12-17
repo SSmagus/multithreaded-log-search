@@ -20,10 +20,10 @@ g++ -O2 main.cpp -o logsearch
 ./logsearch
 
 ## Benchmark (200MB log)
-Threads: 1 | Time: XXX ms  
-Threads: 2 | Time: XXX ms  
-Threads: 4 | Time: XXX ms  
-Threads: 8 | Time: XXX ms  
+Threads: 1 | Matches: 678690 | Time: 3481 ms
+Threads: 2 | Matches: 678690 | Time: 2288 ms
+Threads: 4 | Matches: 678690 | Time: 1320 ms
+Threads: 8 | Matches: 678690 | Time: 1057 ms
 
 ## Notes
 Speedup plateaus after 4–8 threads due to disk I/O bottlenecks.
