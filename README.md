@@ -19,11 +19,17 @@ A multithreaded log search tool for large log files (100MB+), inspired by grep.
 g++ -O2 main.cpp -o logsearch
 ./logsearch
 
-## Benchmark (200MB log)
-Threads: 1 | Matches: 678690 | Time: 3481 ms
-Threads: 2 | Matches: 678690 | Time: 2288 ms
-Threads: 4 | Matches: 678690 | Time: 1320 ms
-Threads: 8 | Matches: 678690 | Time: 1057 ms
+## Benchmark Results (200MB log)
+
+| Threads | Time (ms) |
+|--------:|----------:|
+| 1       | 3481      |
+| 2       | 2288      |
+| 4       | 1320      |
+| 8       | 1057      |
+
+Observed diminishing returns beyond 4 threads due to disk I/O limits.
+
 
 ## Notes
 Speedup plateaus after 4–8 threads due to disk I/O bottlenecks.
